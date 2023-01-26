@@ -1,0 +1,22 @@
+{
+	"name": "OtherEyes",
+	"description": "A browser-adon to simmulate colorblindness",
+	"version": "1.0.3",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "./popup/index.html"
+	},
+	"background": {
+		"service_worker": "service_worker.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["filters/FILTER.js"]
+		}
+	],
+	"icons": {
+		"128": "./images/Iconv4.png"
+	},
+	"permissions": ["activeTab", "scripting", "tabs", "storage"]
+}

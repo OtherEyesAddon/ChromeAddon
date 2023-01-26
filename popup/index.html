@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM Exercise 3</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex flex-column">
+        <div id="Header" class="text-center">
+          <img class="headericon" src="./images/Logo1.png" alt="I" />
+        </div>
+        <p class="text-center" style="margin-top: 5px">Intensity:</p>
+
+        <div class="range-wrap" style="width: 55%">
+          <input type="range" class="range" min="0" max="100" value="100" id="intensity" />
+          <output class="bubble"></output>
+        </div>
+        <div class="d-inline normaltxt">
+          <div class="verticalbutton">
+            <input class="tgl tgl-skewed switchCheck" id="normal" type="checkbox" />
+            <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="normal"></label>
+          </div>
+          <span>Normal</span>
+        </div>
+        <div class="pc-tab">
+          <input checked="checked" id="tab1" type="radio" name="pct" />
+          <input id="tab2" type="radio" name="pct" />
+          <input id="tab3" type="radio" name="pct" />
+          <nav>
+            <ul>
+              <li class="tab1">
+                <label class="tabplus" for="tab1">Dev Filter</label>
+              </li>
+              <li class="tab2">
+                <label class="tabplus" for="tab2">Bonus Filter</label>
+              </li>
+              <li class="tab3">
+                <label class="tabplus" for="tab3">Help Filter</label>
+              </li>
+            </ul>
+          </nav>
+          <section>
+            <div class="tab1">
+              <ul>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="deuteranopia" type="checkbox" />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="deuteranopia"
+                    ></label>
+                  </div>
+                  <span>Deuteranopie</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="protanopia" type="checkbox" />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="protanopia"
+                    ></label>
+                  </div>
+                  <span>Protanopia</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="tritanopia" type="checkbox" />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="tritanopia"
+                    ></label>
+                  </div>
+                  <span>Tritanopia</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab2">
+              <ul>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="grayscale" type="checkbox" />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="grayscale"
+                    ></label>
+                  </div>
+                  <span>Graufilter</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="neon" type="checkbox" />
+                    <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="neon"></label>
+                  </div>
+                  <span>Neon</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input class="tgl tgl-skewed switchCheck" id="inverse" type="checkbox" />
+                    <label class="tgl-btn" data-tg-off="OFF" data-tg-on="ON" for="inverse"></label>
+                  </div>
+                  <span>Negativ</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab3">
+              <ul>
+                <li>
+                  <div class="verticalbutton">
+                    <input
+                      class="tgl tgl-skewed switchCheck"
+                      id="deuteranopia-help"
+                      type="checkbox"
+                    />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="deuteranopia-help"
+                    ></label>
+                  </div>
+                  <span>Deuteranopie</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input
+                      class="tgl tgl-skewed switchCheck"
+                      id="protanopia-help"
+                      type="checkbox"
+                    />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="protanopia-help"
+                    ></label>
+                  </div>
+                  <span>Protanopia</span>
+                </li>
+                <li>
+                  <div class="verticalbutton">
+                    <input
+                      class="tgl tgl-skewed switchCheck"
+                      id="tritanopia-help"
+                      type="checkbox"
+                    />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="OFF"
+                      data-tg-on="ON"
+                      for="tritanopia-help"
+                    ></label>
+                  </div>
+                  <span>Tritanopia</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <ul class="wrapper">
+          <li class="icon left popup" id="popupContainer">
+            <span class="popuptext" id="myPopup"
+              ><span
+                >Wir sind eine Gruppe von Schülern, die es sich zur Aufgabe gemacht haben, das
+                Surferlebnis im Internet und das Erstellen von Webseiten zu verbessern. Unser Team
+                besteht aus talentierten Entwicklern und Designern, die alle daran arbeiten, diese
+                innovative Browser-Erweiterung zu entwickeln.<br /><br />
+                Unser Ziel ist es ihnen neue Möglichkeiten zu bieten. Wir sind stolz darauf, diese
+                benutzerfreundliche Erweiterungen zu entwickeln, die unseren Nutzern das Leben
+                erleichtern.<br /><br />
+                Wir hoffen, dass unsere Erweiterung Ihnen dabei hilft ihr Browererlebnis zu
+                verbessern. Wir freuen uns darauf, von Ihnen zu hören und zu erfahren, wie wir Ihnen
+                noch besser helfen können. .<br /> </span
+            ></span>
+            <span class="tooltip" id="as">About Us</span>
+            <span><img class="menuicon" src="./images/group.png" alt="AU" /></span>
+          </li>
+          <li class="icon mid popup" id="popupContainer2">
+            <span class="popuptext" id="myPopup2">
+              <span
+                >Das Addon wurde entwickelt für Menschen mit einer Sehschwäche, die eine Beihilfe
+                brauchen, während sie durch das Internet surfen und für Entwickler die während der
+                Produktion die Perspektive eines Menschen mit einer Sehschwäche besser verstehen
+                wollen. Das Addon besteht aus einer Vielzahl von Farbpaletten, die zum einen die
+                Sehschwäche ausgleichen und zum anderen die Sehschwäche simulieren.
+              </span></span
+            >
+            <span class="tooltip" id="info">Informationen</span>
+            <span><img class="menuicon" src="./images/Info.png" alt="I" /></span>
+          </li>
+          <li class="icon right" id="ghLINK">
+            <span class="tooltip" id="dl">Download link</span>
+            <span><img class="menuicon" src="./images/github.png" alt="GH" /></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

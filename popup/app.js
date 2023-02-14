@@ -125,7 +125,7 @@ const headerColors = {
 };
 
 $('#ghLINK').addEventListener('click', () => {
-	chrome.tabs.create({ url: 'https://github.com/Nico-Stadler-HTL/OtherEyes' });
+	chrome.tabs.create({ url: 'https://github.com/OtherEyesAddon/ChromeAddon/' });
 });
 
 //Bubble effect of slider
